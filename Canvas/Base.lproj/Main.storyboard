@@ -18,14 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWU-yz-8GR">
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="trayView" translatesAutoresizingMaskIntoConstraints="NO" id="oWU-yz-8GR">
                                 <rect key="frame" x="0.0" y="397" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="n4W-or-0Hd">
-                                        <rect key="frame" x="182" y="0.0" width="20" height="14"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-sX-EDH">
                                         <rect key="frame" x="45" y="42" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -74,18 +70,24 @@
                                             <outletCollection property="gestureRecognizers" destination="1BR-AN-Zh6" appends="YES" id="WCJ-6q-J1Y"/>
                                         </connections>
                                     </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="n4W-or-0Hd">
+                                        <rect key="frame" x="180" y="8" width="20" height="14"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.77253706397990807" green="1" blue="0.90215277051371201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.72855572534549307" green="0.94376586294416243" blue="0.8524330297026993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="QM4-Ju-ARb" appends="YES" id="7DD-mf-WEX"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.94443152702388311" blue="0.65123947415694028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="arrowView" destination="n4W-or-0Hd" id="TW9-hl-QfY"/>
+                        <outlet property="canvasView" destination="8bC-Xf-vdC" id="DX9-YC-xeq"/>
                         <outlet property="trayView" destination="oWU-yz-8GR" id="PRJ-Zq-VVz"/>
                     </connections>
                 </viewController>
